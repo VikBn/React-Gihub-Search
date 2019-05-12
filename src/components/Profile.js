@@ -107,7 +107,7 @@ const ProfileWrapper = styled.div`
   }
   
   .search__btn,
-  .start__repo {
+  .repo {
       width: 100%;
   }
 }
@@ -118,7 +118,7 @@ const ProfileWrapper = styled.div`
      padding: 0 1rem;
   }
 
-  .start__repo {
+  .repo {
      width: 100%;
   }
 }

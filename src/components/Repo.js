@@ -28,20 +28,11 @@ export default class Repo extends Component {
 
 const RepoWrapper = styled.div`
     width: calc(50% - 8px);
-   
-    .repo:hover {
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      transition: all .2s;
-    }
     
     .repo__title{
        font-size: 14px;
        font-weight: 600;
      }
-     
-    .repo__title:focus {
-      text-decoration: none;
-    }
     
     .repo__descr {
        font-size: 12px;
