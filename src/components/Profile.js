@@ -13,18 +13,25 @@ export default class Profile extends Component {
                     <ProfileWrapper>
                         <div className="container-fluid profile__wrapper mt-4 d-flex flex-wrap">
                             <div className="col-md-3 col-sm-12 mb-3">
-                                <img className="profile__img" src={user.avatar_url}
-                                     alt="avatar"/>
-                                <span className="profile__name d-block my-2">{user.name}</span>
-                                <span className="profile__nickname">{user.login}</span>
-                                <div className="profile__bio my-2">{user.bio}</div>
-                                <div className="mb-3">
-                                    {user.location ?
-                                        <img className="align-baseline mr-1" width="14" src="./img/location.svg"
-                                             alt=""/>
-                                        : null}
-                                    {user.location}
+                                <div className="profile__info mb-3">
+                                    <img className="profile__img" src={user.avatar_url}
+                                         alt="avatar"/>
+                                    <div>
+                                        <span className="profile__name d-block my-2">{user.name}</span>
+                                        <span className="profile__nickname">{user.login}</span>
+                                        <div className="profile__bio d-none d-sm-block my-2">{user.bio}</div>
+                                        <div className="mb-3">
+                                            {user.location ?
+                                                <img className="align-baseline mr-1" width="14" src="./img/location.svg"
+                                                     alt=""/>
+                                                : null}
+                                            {user.location}
+                                        </div>
+                                    </div>
                                 </div>
+
+
+                                <div className="profile__bio d-block d-sm-none mb-3">{user.bio}</div>
                                 <a target="_blank" rel="noopener noreferrer" href={user.html_url}
                                    className="btn btn-light btn-lg py-1 border btn-block text-capitalize profile__btn">view
                                     profile
@@ -104,6 +111,24 @@ const ProfileWrapper = styled.div`
 
   .profile__wrapper {
       padding: 0;
+  }
+  
+  .profile__info {
+      display: flex;
+  }
+  
+  .profile__img {
+      max-width: 150px;
+      max-height: 150px;
+      margin-right: 16px;
+  }
+  
+  .profile__name {
+      font-size: 20px;
+  }
+  
+  .profile__nickname {
+      font-size: 18px;
   }
   
   .search__btn,

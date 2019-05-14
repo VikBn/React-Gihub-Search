@@ -54,7 +54,7 @@ const SearchWrapper = styled.div`
     
     .search__logo-text {
         display: none;
-        font-size: 21px;
+        font-size: 20px;
         font-weight: 500;
     }
 
